@@ -1,0 +1,6 @@
+[dbc 파일 확인]
+python -m cantools dump MV_HVPTC.dbc
+
+
+[blf Low Data 추출]
+python .\test.py > output.txt

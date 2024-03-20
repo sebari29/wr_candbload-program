@@ -1,0 +1,372 @@
+================================= Messages =================================
+
+  ------------------------------------------------------------------------
+
+  Name:           HVREAR_FLOOR_SIDE_STATUS_1
+  Id:             0x152
+  Length:         8 bytes
+  Cycle time:     - ms
+  Senders:        HVPP
+  Layout:
+
+                          Bit
+
+             7   6   5   4   3   2   1   0
+           +---+---+---+---+---+---+---+---+
+         0 |<-------------x|<-x|<-----x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |               |   |       +-- HVREAR_ReadyStatusFloor_Flag
+             |               |   +-- HVREAR_OpStateFloor_Flag
+             |               +-- RESERVED1
+             +-- HVREAR__ControlTypeFloor_Flag
+           +---+---+---+---+---+---+---+---+
+         1 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR__OutTempFloor_DegC
+           +---+---+---+---+---+---+---+---+
+         2 |------------------------------x|
+           +---+---+---+---+---+---+---+---+
+     B   3 |<------------------------------|
+     y     +---+---+---+---+---+---+---+---+
+     t       +-- HVRear__CstPwrFloor_W
+     e     +---+---+---+---+---+---+---+---+
+         4 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__VoltageFloor_V
+           +---+---+---+---+---+---+---+---+
+         5 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__CurentFloor_A
+           +---+---+---+---+---+---+---+---+
+         6 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__DutyFBFloor_Perc
+           +---+---+---+---+---+---+---+---+
+         7 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED2
+
+  Signal tree:
+
+    -- {root}
+       +-- HVREAR_ReadyStatusFloor_Flag
+       +-- HVREAR_OpStateFloor_Flag
+       +-- RESERVED1
+       +-- HVREAR__ControlTypeFloor_Flag
+       +-- HVREAR__OutTempFloor_DegC
+       +-- HVRear__CstPwrFloor_W
+       +-- HVRear__VoltageFloor_V
+       +-- HVRear__CurentFloor_A
+       +-- HVRear__DutyFBFloor_Perc
+       +-- RESERVED2
+
+  ------------------------------------------------------------------------
+
+  Name:           HVREAR_FLOOR_SIDE_STATUS_2
+  Id:             0x153
+  Length:         8 bytes
+  Cycle time:     - ms
+  Senders:        HVPP
+  Layout:
+
+                          Bit
+
+             7   6   5   4   3   2   1   0
+           +---+---+---+---+---+---+---+---+
+         0 |<-------------------------x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |                           +-- HVREAR_FltFloor_Flag
+             +-- RESERVED1
+           +---+---+---+---+---+---+---+---+
+         1 |<-x|<-x|<-x|<-x|<-x|<-x|<-x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |   |   |   |   |   |   |   +-- HVREAR_FltLVLowFloor_Flag
+             |   |   |   |   |   |   +-- HVREAR_FltLVHighFloor_Flag
+             |   |   |   |   |   +-- HVREAR_FltHVLowFloor_Flag
+             |   |   |   |   +-- HVREAR_FltHVHighFloor_Flag
+             |   |   |   +-- HVREAR_FltOverCurrentFloor_Flag
+             |   |   +-- HVREAR_FltThermalShutDnFloorFlag
+             |   +-- HVREAR_FltPcbThrmlShtDnFloorFlag
+             +-- RESERVED2
+           +---+---+---+---+---+---+---+---+
+         2 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED3
+           +---+---+---+---+---+---+---+---+
+         3 |<-------------------------x|<-x|
+     B     +---+---+---+---+---+---+---+---+
+     y       |                           +-- HVREAR_FltMsgTmOutCCU2Floor_Flag
+     t       +-- RESERVED4
+     e     +---+---+---+---+---+---+---+---+
+         4 |<-x|<-x|<-x|<-x|<-x|<-x|<-x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |   |   |   |   |   |   |   +-- HVREAR_FailHVSensorFloor_Flag
+             |   |   |   |   |   |   +-- HVREAR_FailLVSensorFloor_Flag
+             |   |   |   |   |   +-- HVREAR_FailCurrentSnsrFloor_Flag
+             |   |   |   |   +-- HVREAR_FailCoreTempSnsrFloorFlag
+             |   |   |   +-- HVREAR_FailPcbTempSnsrFloor_Flag
+             |   |   +-- HVREAR_FailFloorIGBT_Flag
+             |   +-- HVREAR_FailFloorOpenLoad_Flag
+             +-- RESERVED5
+           +---+---+---+---+---+---+---+---+
+         5 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR_LtdOperationCaseFloorFlag
+           +---+---+---+---+---+---+---+---+
+         6 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR_SoftwareVerFloor_Num
+           +---+---+---+---+---+---+---+---+
+         7 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED6
+
+  Signal tree:
+
+    -- {root}
+       +-- HVREAR_FltFloor_Flag
+       +-- RESERVED1
+       +-- HVREAR_FltLVLowFloor_Flag
+       +-- HVREAR_FltLVHighFloor_Flag
+       +-- HVREAR_FltHVLowFloor_Flag
+       +-- HVREAR_FltHVHighFloor_Flag
+       +-- HVREAR_FltOverCurrentFloor_Flag
+       +-- HVREAR_FltThermalShutDnFloorFlag
+       +-- HVREAR_FltPcbThrmlShtDnFloorFlag
+       +-- RESERVED2
+       +-- RESERVED3
+       +-- HVREAR_FltMsgTmOutCCU2Floor_Flag
+       +-- RESERVED4
+       +-- HVREAR_FailHVSensorFloor_Flag
+       +-- HVREAR_FailLVSensorFloor_Flag
+       +-- HVREAR_FailCurrentSnsrFloor_Flag
+       +-- HVREAR_FailCoreTempSnsrFloorFlag
+       +-- HVREAR_FailPcbTempSnsrFloor_Flag
+       +-- HVREAR_FailFloorIGBT_Flag
+       +-- HVREAR_FailFloorOpenLoad_Flag
+       +-- RESERVED5
+       +-- HVREAR_LtdOperationCaseFloorFlag
+       +-- HVREAR_SoftwareVerFloor_Num
+       +-- RESERVED6
+
+  ------------------------------------------------------------------------
+
+  Name:           CCU3
+  Id:             0x112
+  Length:         8 bytes
+  Cycle time:     - ms
+  Senders:        CCU
+  Layout:
+
+                          Bit
+
+             7   6   5   4   3   2   1   0
+           +---+---+---+---+---+---+---+---+
+         0 |<-------------x|<---------x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |               |           +-- CCU_HVREARAllowOperation_Flag
+             |               +-- CCU_xEV_BmsRomType
+             +-- RESERVED1
+           +---+---+---+---+---+---+---+---+
+         1 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- CCU_HVREARTargetDutyRoof_Perc
+           +---+---+---+---+---+---+---+---+
+         2 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- CCU_HVREARTargetDutyFloor_Perc
+           +---+---+---+---+---+---+---+---+
+         3 |<-------------------------x|<-x|
+           +---+---+---+---+---+---+---+---+
+     B       |                           +-- CCU_HVREARSelfDischargeReq_flag
+     y       +-- RESERVED2
+     t     +---+---+---+---+---+---+---+---+
+     e   4 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED3
+           +---+---+---+---+---+---+---+---+
+         5 |<-------------x|<-x|<-x|<-x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |               |   |   |   +-- CCU_FltMsgTmOutHVREAR1_Flag
+             |               |   |   +-- CCU_FltMsgTmOutHVREAR2_Flag
+             |               |   +-- CCU_FltMsgTmOutHVREAR3_Flag
+             |               +-- CCU_FltMsgTmOutHVREAR4_Flag
+             +-- RESERVED4
+           +---+---+---+---+---+---+---+---+
+         6 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED5
+           +---+---+---+---+---+---+---+---+
+         7 |   |   |   |   |   |   |   |<-x|
+           +---+---+---+---+---+---+---+---+
+                                         +-- RESERVED6
+
+  Signal tree:
+
+    -- {root}
+       +-- CCU_HVREARAllowOperation_Flag
+       +-- CCU_xEV_BmsRomType
+       +-- RESERVED1
+       +-- CCU_HVREARTargetDutyRoof_Perc
+       +-- CCU_HVREARTargetDutyFloor_Perc
+       +-- CCU_HVREARSelfDischargeReq_flag
+       +-- RESERVED2
+       +-- RESERVED3
+       +-- CCU_FltMsgTmOutHVREAR1_Flag
+       +-- CCU_FltMsgTmOutHVREAR2_Flag
+       +-- CCU_FltMsgTmOutHVREAR3_Flag
+       +-- CCU_FltMsgTmOutHVREAR4_Flag
+       +-- RESERVED4
+       +-- RESERVED5
+       +-- RESERVED6
+
+  ------------------------------------------------------------------------
+
+  Name:           HVREAR_ROOF_SIDE_STATUS_2
+  Id:             0x151
+  Length:         8 bytes
+  Cycle time:     - ms
+  Senders:        HVPP
+  Layout:
+
+                          Bit
+
+             7   6   5   4   3   2   1   0
+           +---+---+---+---+---+---+---+---+
+         0 |<-------------------------x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |                           +-- HVREAR_FltRoof_Flag
+             +-- RESERVED1
+           +---+---+---+---+---+---+---+---+
+         1 |<-x|<-x|<-x|<-x|<-x|<-x|<-x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |   |   |   |   |   |   |   +-- HVREAR_FltLVLowRoof_Flag
+             |   |   |   |   |   |   +-- HVREAR_FltLVHighRoof_Flag
+             |   |   |   |   |   +-- HVREAR_FltHVLowRoof_Flag
+             |   |   |   |   +-- HVREAR_FltHVHighRoof_Flag
+             |   |   |   +-- HVREAR_FltOverCurrentRoof_Flag
+             |   |   +-- HVREAR_FltThermalShutDnRoof_Flag
+             |   +-- HVREAR_FltPcbThrmlShtDnRoof_Flag
+             +-- RESERVED2
+           +---+---+---+---+---+---+---+---+
+         2 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED3
+           +---+---+---+---+---+---+---+---+
+         3 |<-------------------------x|<-x|
+     B     +---+---+---+---+---+---+---+---+
+     y       |                           +-- HVREAR_FltMsgTmOutCCU2Roof_Flag
+     t       +-- RESERVED4
+     e     +---+---+---+---+---+---+---+---+
+         4 |<-x|<-x|<-x|<-x|<-x|<-x|<-x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |   |   |   |   |   |   |   +-- HVREAR_FailHVSensorRoof_Flag
+             |   |   |   |   |   |   +-- HVREAR_FailLVSensorRoof_Flag
+             |   |   |   |   |   +-- HVREAR_FailCurrentSnsrRoof_Flag
+             |   |   |   |   +-- HVREAR_FailCoreTempSnsrRoof_Flag
+             |   |   |   +-- HVREAR_FailPcbTempSnsrRoof_Flag
+             |   |   +-- HVREAR_FailRoofIGBT_Flag
+             |   +-- HVREAR_FailRoofOpenLoad_Flag
+             +-- RESERVED5
+           +---+---+---+---+---+---+---+---+
+         5 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR_LtdOperationCauseRoofFlag
+           +---+---+---+---+---+---+---+---+
+         6 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR_SoftwareVerRoof_Num
+           +---+---+---+---+---+---+---+---+
+         7 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED6
+
+  Signal tree:
+
+    -- {root}
+       +-- HVREAR_FltRoof_Flag
+       +-- RESERVED1
+       +-- HVREAR_FltLVLowRoof_Flag
+       +-- HVREAR_FltLVHighRoof_Flag
+       +-- HVREAR_FltHVLowRoof_Flag
+       +-- HVREAR_FltHVHighRoof_Flag
+       +-- HVREAR_FltOverCurrentRoof_Flag
+       +-- HVREAR_FltThermalShutDnRoof_Flag
+       +-- HVREAR_FltPcbThrmlShtDnRoof_Flag
+       +-- RESERVED2
+       +-- RESERVED3
+       +-- HVREAR_FltMsgTmOutCCU2Roof_Flag
+       +-- RESERVED4
+       +-- HVREAR_FailHVSensorRoof_Flag
+       +-- HVREAR_FailLVSensorRoof_Flag
+       +-- HVREAR_FailCurrentSnsrRoof_Flag
+       +-- HVREAR_FailCoreTempSnsrRoof_Flag
+       +-- HVREAR_FailPcbTempSnsrRoof_Flag
+       +-- HVREAR_FailRoofIGBT_Flag
+       +-- HVREAR_FailRoofOpenLoad_Flag
+       +-- RESERVED5
+       +-- HVREAR_LtdOperationCauseRoofFlag
+       +-- HVREAR_SoftwareVerRoof_Num
+       +-- RESERVED6
+
+  ------------------------------------------------------------------------
+
+  Name:           HVREAR_ROOF_SIDE_STATUS_1
+  Id:             0x150
+  Length:         8 bytes
+  Cycle time:     - ms
+  Senders:        HVPP
+  Layout:
+
+                          Bit
+
+             7   6   5   4   3   2   1   0
+           +---+---+---+---+---+---+---+---+
+         0 |<-------------x|<-x|<-----x|<-x|
+           +---+---+---+---+---+---+---+---+
+             |               |   |       +-- HVREAR_ReadyStatusRoof_Flag
+             |               |   +-- HVREAR_OpStateRoof_Flag
+             |               +-- HVREAR_HVPtcIntLk_Flag
+             +-- HVREAR__ControlTypeRoof_Flag
+           +---+---+---+---+---+---+---+---+
+         1 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVREAR__OutTempRoof_DegC
+           +---+---+---+---+---+---+---+---+
+         2 |------------------------------x|
+           +---+---+---+---+---+---+---+---+
+     B   3 |<------------------------------|
+     y     +---+---+---+---+---+---+---+---+
+     t       +-- HVRear__CstPwrRoof_W
+     e     +---+---+---+---+---+---+---+---+
+         4 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__VoltageRoof_V
+           +---+---+---+---+---+---+---+---+
+         5 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__CurentRoof_A
+           +---+---+---+---+---+---+---+---+
+         6 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- HVRear__DutyFBRoof_Perc
+           +---+---+---+---+---+---+---+---+
+         7 |<-----------------------------x|
+           +---+---+---+---+---+---+---+---+
+             +-- RESERVED1
+
+  Signal tree:
+
+    -- {root}
+       +-- HVREAR_ReadyStatusRoof_Flag
+       +-- HVREAR_OpStateRoof_Flag
+       +-- HVREAR_HVPtcIntLk_Flag
+       +-- HVREAR__ControlTypeRoof_Flag
+       +-- HVREAR__OutTempRoof_DegC
+       +-- HVRear__CstPwrRoof_W
+       +-- HVRear__VoltageRoof_V
+       +-- HVRear__CurentRoof_A
+       +-- HVRear__DutyFBRoof_Perc
+       +-- RESERVED1
+
+  ------------------------------------------------------------------------
