@@ -1,0 +1,148 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HVPP CCU
+
+
+BO_ 338 HVREAR_FLOOR_SIDE_STATUS_1: 8 HVPP
+ SG_ RESERVED2 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED1 : 3|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVRear__DutyFBFloor_Perc : 48|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ HVRear__CurentFloor_A : 40|8@1+ (0.2,0) [0|50] "A" Vector__XXX
+ SG_ HVRear__VoltageFloor_V : 32|8@1+ (4,0) [0|1000] "V" Vector__XXX
+ SG_ HVRear__CstPwrFloor_W : 16|16@1+ (1,0) [0|10000] "W" Vector__XXX
+ SG_ HVREAR__OutTempFloor_DegC : 8|8@1+ (1,-40) [-40|240] "DegC" Vector__XXX
+ SG_ HVREAR__ControlTypeFloor_Flag : 4|4@1+ (1,0) [0|2] "flag" Vector__XXX
+ SG_ HVREAR_OpStateFloor_Flag : 1|2@1+ (1,0) [0|3] "flag" Vector__XXX
+ SG_ HVREAR_ReadyStatusFloor_Flag : 0|1@1+ (1,0) [0|1] "flag" Vector__XXX
+
+BO_ 339 HVREAR_FLOOR_SIDE_STATUS_2: 8 HVPP
+ SG_ RESERVED6 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED5 : 39|1@1- (1,0) [0|0] "0" Vector__XXX
+ SG_ RESERVED4 : 25|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED3 : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED2 : 15|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED1 : 1|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HVREAR_SoftwareVerFloor_Num : 48|8@1+ (1,0) [0|255] "flag" Vector__XXX
+ SG_ HVREAR_LtdOperationCaseFloorFlag : 40|8@1+ (1,0) [0|255] "flag" Vector__XXX
+ SG_ HVREAR_FailFloorOpenLoad_Flag : 38|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailFloorIGBT_Flag : 37|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailPcbTempSnsrFloor_Flag : 36|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailCoreTempSnsrFloorFlag : 35|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailCurrentSnsrFloor_Flag : 34|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailLVSensorFloor_Flag : 33|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailHVSensorFloor_Flag : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVREAR_FltMsgTmOutCCU2Floor_Flag : 24|1@1+ (1,0) [0|1] "falg" Vector__XXX
+ SG_ HVREAR_FltPcbThrmlShtDnFloorFlag : 14|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltThermalShutDnFloorFlag : 13|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltOverCurrentFloor_Flag : 12|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltHVHighFloor_Flag : 11|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltHVLowFloor_Flag : 10|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltLVHighFloor_Flag : 9|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltLVLowFloor_Flag : 8|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltFloor_Flag : 0|1@1+ (1,0) [0|1] "Flag" Vector__XXX
+
+BO_ 274 CCU3: 8 CCU
+ SG_ RESERVED6 : 56|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED5 : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED4 : 44|4@1- (1,0) [0|0] "" Vector__XXX
+ SG_ CCU_FltMsgTmOutHVREAR4_Flag : 43|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ CCU_FltMsgTmOutHVREAR3_Flag : 42|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ CCU_FltMsgTmOutHVREAR2_Flag : 41|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ CCU_FltMsgTmOutHVREAR1_Flag : 40|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ RESERVED3 : 32|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED2 : 25|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ CCU_HVREARSelfDischargeReq_flag : 24|1@1- (1,0) [0|1] "flag" Vector__XXX
+ SG_ CCU_HVREARTargetDutyFloor_Perc : 16|8@1+ (0.5,0) [0|127.5] "flag" Vector__XXX
+ SG_ CCU_HVREARTargetDutyRoof_Perc : 8|8@1+ (0.5,0) [0|127.5] "flag" Vector__XXX
+ SG_ RESERVED1 : 4|4@1+ (1,0) [0|0] "flag" Vector__XXX
+ SG_ CCU_xEV_BmsRomType : 1|3@1- (1,0) [0|8] "flag" Vector__XXX
+ SG_ CCU_HVREARAllowOperation_Flag : 0|1@1+ (1,0) [0|1] "flag" Vector__XXX
+
+BO_ 337 HVREAR_ROOF_SIDE_STATUS_2: 8 HVPP
+ SG_ RESERVED6 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED5 : 39|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED4 : 25|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED3 : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED2 : 15|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RESERVED1 : 1|7@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HVREAR_SoftwareVerRoof_Num : 48|8@1+ (1,0) [0|255] "flag" Vector__XXX
+ SG_ HVREAR_LtdOperationCauseRoofFlag : 40|8@1+ (1,0) [0|255] "flag" Vector__XXX
+ SG_ HVREAR_FailRoofOpenLoad_Flag : 38|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailRoofIGBT_Flag : 37|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailPcbTempSnsrRoof_Flag : 36|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailCoreTempSnsrRoof_Flag : 35|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailCurrentSnsrRoof_Flag : 34|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailLVSensorRoof_Flag : 33|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FailHVSensorRoof_Flag : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVREAR_FltMsgTmOutCCU2Roof_Flag : 24|1@1+ (1,0) [0|1] "falg" Vector__XXX
+ SG_ HVREAR_FltPcbThrmlShtDnRoof_Flag : 14|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltThermalShutDnRoof_Flag : 13|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltOverCurrentRoof_Flag : 12|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltHVHighRoof_Flag : 11|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltHVLowRoof_Flag : 10|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltLVHighRoof_Flag : 9|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltLVLowRoof_Flag : 8|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVREAR_FltRoof_Flag : 0|1@1+ (1,0) [0|1] "Flag" Vector__XXX
+
+BO_ 336 HVREAR_ROOF_SIDE_STATUS_1: 8 HVPP
+ SG_ RESERVED1 : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ HVREAR_HVPtcIntLk_Flag : 3|1@1+ (1,0) [0|1] "flag" Vector__XXX
+ SG_ HVRear__DutyFBRoof_Perc : 48|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ HVRear__CurentRoof_A : 40|8@1+ (0.2,0) [0|50] "A" Vector__XXX
+ SG_ HVRear__VoltageRoof_V : 32|8@1+ (4,0) [0|1000] "V" Vector__XXX
+ SG_ HVRear__CstPwrRoof_W : 16|16@1+ (1,0) [0|10000] "W" Vector__XXX
+ SG_ HVREAR__OutTempRoof_DegC : 8|8@1+ (1,-40) [-40|240] "DegC" Vector__XXX
+ SG_ HVREAR__ControlTypeRoof_Flag : 4|4@1+ (1,0) [0|2] "flag" Vector__XXX
+ SG_ HVREAR_OpStateRoof_Flag : 1|2@1+ (1,0) [0|3] "flag" Vector__XXX
+ SG_ HVREAR_ReadyStatusRoof_Flag : 0|1@1+ (1,0) [0|1] "flag" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+
